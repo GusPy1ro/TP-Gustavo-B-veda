@@ -2,7 +2,7 @@
 
 **Autor:** Gustavo Bóveda
 **Variante:** Episodios (`https://rickandmortyapi.com/api/episode`)
-**Página publicada:** 
+**Página publicada:** https://github.com/GusPy1ro/TP-Gustavo-B-veda/blob/main/TP_B%C3%B3veda_Gustavo
 
 ## Descripción
 
