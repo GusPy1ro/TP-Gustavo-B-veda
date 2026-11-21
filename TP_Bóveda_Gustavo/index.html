@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Busca episodios de Rick and Morty por nombre y filtra por temporada.">
+  <title>Episodios de Rick and Morty | Buscador</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%2386d03a' stroke='%2314332c' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%23d7f5a3' stroke='%2314332c' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="marca">
+      <span class="portal" aria-hidden="true"></span>
+      <h1>Episodios de Rick and Morty</h1>
+    </div>
+    <p class="lema">Busca por nombre o filtra por temporada.</p>
+  </header>
+
+  <main class="principal">
+    <section aria-labelledby="titulo-buscador">
+      <h2 id="titulo-buscador" class="visualmente-oculto">Buscador de episodios</h2>
+
+      <form id="formulario-busqueda" class="buscador">
+        <div class="campo campo--nombre">
+          <label for="nombre">Nombre del episodio</label>
+          <input type="search" id="nombre" name="nombre" placeholder="Por ejemplo: pilot" autocomplete="off">
+        </div>
+
+        <div class="campo campo--temporada">
+          <label for="temporada">Temporada</label>
+          <select id="temporada" name="temporada">
+            <option value="">Todas</option>
+            <option value="S01">S01</option>
+            <option value="S02">S02</option>
+            <option value="S03">S03</option>
+            <option value="S04">S04</option>
+            <option value="S05">S05</option>
+          </select>
+        </div>
+
+        <button type="submit" id="boton-buscar" class="boton">Buscar</button>
+      </form>
+    </section>
+
+    <p id="estado" class="estado estado--info" role="status">Escribe un nombre o elige una temporada para empezar.</p>
+
+    <section aria-labelledby="titulo-resultados">
+      <h2 id="titulo-resultados" class="visualmente-oculto">Resultados</h2>
+      <div id="resultados" class="resultados"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Hecho por <strong>Gustavo Bóveda</strong></p>
+    <p>Datos de <a href="https://rickandmortyapi.com" target="_blank" rel="noopener">The Rick and Morty API</a></p>
+  </footer>
+
+</body>
+</html>
